@@ -3,7 +3,6 @@
 //  algohw2
 //
 //  Created by Hasan Furkan Vural on 20.11.2018.
-//  150140029
 //  Copyright © 2018 H. Furkan Vural. All rights reserved.
 //
 
@@ -14,36 +13,13 @@
 #include <string>
 #include <time.h>
 #include <math.h>
+#include "Employee.h"
+
 #define tot 1
 #define perf 2
 #define maxsize 888
 
 using namespace std;
-
-class Employee
-{
-    int empID;
-    int totalnum;
-    int posfb;
-    int negfb;
-    int score() {return (2 * totalnum) + posfb - negfb;};
-public:
-    void getID(string x){empID=stoi(x);};
-    void gettotal(string x){totalnum=stoi(x);};
-    void getpos(string x){posfb = stoi(x);};
-    void getneg(string x){negfb=stoi(x);};
-    
-    Employee operator=( Employee&) ;
-    
-    int empidout(){return empID;};
-    int totnumout(){return totalnum;};
-    int posfbout(){return posfb;};
-    int negfbout(){return negfb;};
-    int scoreout(){return score();};
-    
-    Employee(){};
-    Employee(int x, int y, int z, int k){empID=x;totalnum=y;posfb=z;negfb=k;};
-};
 
 void heapSort(Employee arr[], int n, int opt);
 void max_heapify(Employee arr[], int n, int i, int opt);
